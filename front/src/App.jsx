@@ -8,6 +8,8 @@ import { useDispatch ,useSelector} from 'react-redux'
 import { getUser } from './redux/userSlice'
 import { useEffect } from 'react'
 import './App.css'
+import Login from './Login'
+
 function App() {
   const dispatch=useDispatch();
   
@@ -27,6 +29,7 @@ function App() {
     <Routes>
       <Route path='/' element={<User/>}></Route>
       <Route path='/create' element={<Create/>}></Route>
+      <Route path='/login' element={<Login/>}></Route> 
       <Route path='/update/:id' element={<Update/>}></Route> 
      </Routes>
     </BrowserRouter>
